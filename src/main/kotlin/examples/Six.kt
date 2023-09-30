@@ -5,6 +5,14 @@ package examples
  * @author Incheol.Jung
  * @since 2023. 09. 30.
  */
+fun describeString(maybeString: String?): String {
+    if (maybeString != null && maybeString.length > 0) {
+        return "문자열 길이: ${maybeString.length}"
+    } else {
+        return "빈 문자열이거나 null 입니다"
+    }
+}
+
 fun main() {
     var naverNull: String = "이 변수는 null이 될 수 없다"
 //    naverNull = null
@@ -21,4 +29,6 @@ fun main() {
 
     strLength(naverNull)
 //    strLength(nullable)
+
+    println(describeString(null))
 }
