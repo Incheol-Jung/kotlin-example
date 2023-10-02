@@ -18,11 +18,14 @@ fun main() {
     fun printNonNull(str: String?) {
         println("\"$str\" 프린트:")
 
-        str?.let{
+        val temp = str?.let{
             print("\t")
             customPrint(it)
             println()
+            "test"
         }
+
+        println(temp)
 
     }
 
